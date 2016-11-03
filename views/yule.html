@@ -1,0 +1,37 @@
+<!-- 娱乐新闻 -->
+<!-- 头部 -->
+<header>
+	<span class="weather"><img src="images/weather.png" alt="搜索" title="搜索"></span>
+	<span class="subject">新闻资讯</span>
+	<span class="more"><img src="images/more.png" alt="更多" title="更多"></span>
+</header>
+
+<!-- 导航菜单 -->
+<nav>
+	<ul active>
+		<li><a href="#/index">头条</a></li>
+		<li><a href="#/shehui">社会</a></li>
+		<li><a href="#/guonei">国内</a></li>
+		<li><a href="#/guoji">国际</a></li>
+		<li><a href="#/yule"  class="active">娱乐</a></li>
+		<li><a href="#/tiyu">体育</a></li>
+		<li><a href="#/junshi">军事</a></li>
+		<li><a href="#/keji">科技</a></li>
+		<li><a href="#/caijing">财经</a></li>
+		<li><a href="#/shishang">时尚</a></li>
+	</ul>
+</nav>
+
+<!-- 娱乐新闻列表 -->
+<ul class="summary1">
+	<li class="list1" ng-repeat="new in news" ng-click=detail($index)>
+		<p class="img1"><img ng-src="{{new.thumbnail_pic_s}}" alt="新闻" titile="新闻"></p>
+		<span>{{new.date}}</span>
+		<p class="title1">{{new.title}}</p>
+	</li>
+</ul>
+
+<!-- 加载菊花 -->
+<div ng-show="loading" class="loading">
+	<img src="images/juhua.png"/>
+</div>
