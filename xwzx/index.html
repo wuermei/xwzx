@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- 定义angular模块 -->
+<html ng-app="wem">
+<head>
+	<meta charset="UTF-8">
+	<!-- title小图标 -->
+	<link rel="shortcut icon" type="text/css" href="images/title.png">
+	<!-- 手机app应用 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+	<!-- 引入样式 -->
+	<link type="text/css" rel="stylesheet" href="css/index.css" />
+	<!-- swiper轮播样式 -->
+	<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+	<title>新闻资讯</title>
+</head>
+<body>
+	<!-- 路由渲染视图 -->
+	<div ng-view class="view"></div>
+	
+	<!-- 底部 -->
+	<foot></foot>
+</body>
+<script src="js/angular.js"></script>
+<!-- 路由 -->
+<script src="js/angular-route.js"></script>
+<!-- 触摸 -->
+<script src="js/angular-touch.js"></script>
+<!-- 一些控制器 -->
+<script src="controller/index.js"></script>
+<!-- swiper轮播 -->
+<script src="js/swiper-3.3.1.jquery.min.js"></script>
+<script src="js/swiper-3.3.1.min.js"></script>
+
+</html>

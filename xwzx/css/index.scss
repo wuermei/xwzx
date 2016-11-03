@@ -1,0 +1,307 @@
+@charset "UTF-8";
+/*重置样式*/
+body,
+img,
+ul,
+li,
+ol,
+dl,
+img,
+form,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, nav, section, header, div {
+  margin: 0;
+  padding: 0; }
+
+body,
+html {
+  height: 100%; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #000000; }
+
+/*移动手机端网页，将根元素的<html>的字体放大100倍,网页的其他地方设置为rem，得等比例的缩小，并且根据网页的和手机的像素进行等比例的缩放*/
+html {
+  font-size: 100px;
+  font-family: 'sans-serif'; }// 无衬线字体，是一种通用字体族
+
+body{font-size: 0.14rem;}
+
+// 头部样式
+header{
+	width: 100%;
+	height: 8%;
+  position: fixed;
+	background: purple;
+	color: #fff;
+  font-weight: bold;
+  font-size: 0.20rem;
+  z-index: 2;
+    // span共同的样式
+    span{
+    	display: block;
+    	float: left;
+    	height: 80%;
+    	margin-top: 0.05rem;
+    }
+    .weather{
+    	width: 15%;
+    	img{
+    		width: 100%;
+    		height: 100%;
+    	}
+    }
+    .subject{
+    	width: 30%;
+    	text-align: center;
+    	line-height: 0.3rem;
+    	margin-left: 0.5rem;
+    }
+    .more{
+    	float: right;
+    	width: 15%;
+    	img{
+    		width: 100%;
+    		height: 100%;
+    	}
+    }
+}
+
+// 导航条样式
+nav{
+  width: 100%;
+  height: 8%;
+  position: fixed;
+  top: 8%;
+  left: 0;
+  z-index: 2;
+  background: #fff;
+    ul{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+      li{
+      width: 20%;
+      height: 50%;
+      text-align: center;
+      float: left;
+        a{
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+          }
+        }
+   }
+}
+
+// 新闻类型选中样式
+.active{
+  color: purple;
+  font-size: 0.16rem;
+}
+
+// 渲染视图样式
+.view{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// 底部样式
+footer{
+	width: 100%;
+	height: 8%;
+	border-top: 0.01rem solid #ccc;
+	box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  background: #fff;
+	ul{
+		width: 100%;
+		height: 100%;
+		li{
+			width: 12%;
+			height: 80%;
+			float: left;
+			padding: 0 4%;
+			margin-top: 1%;
+      a{
+        display: block;
+        float: left;
+        width: 100%;
+        height: 100%;
+      }
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+}
+
+// 轮播图外层包裹样式
+.lunbo{
+  position: absolute;
+  top: 0.9rem;
+  float: left;
+  width: 100%;//备注：解决了首页可以左右滑动的问题
+  img{
+    width: 100%;
+    height: 100%;
+
+  }
+  .swiper-container {
+    width: 100%;
+    height: 1.2rem;
+}  
+}
+
+// 头条、国内、财经新闻列表样式
+.summary{
+  position: absolute;
+  top: 2.1rem;
+}
+.list{
+  width: 100%;
+  height: 1rem;
+  border-bottom: 0.01rem dashed #000;
+  padding-top: 0.1rem;
+  p{
+  width: 50%;
+  height: 80%;
+  float: left;
+  }
+  .title{
+  color:#000;
+  font-size: 0.14rem;
+ }
+  .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.05rem;
+  }
+  span{
+  display: block;
+  height: 20%;
+  float: left;
+  font-size: 0.12rem;
+  }
+}
+
+// 社会、娱乐、体育新闻列表
+.summary1{
+  position: absolute;
+  top: 0.9rem;
+  .list1{
+        width: 100%;
+        height: 2rem;
+        border-bottom: 0.01rem dashed #000;
+        padding-top: 0.1rem;
+        text-align: center;
+  }
+  .img1{
+        width: 80%;
+        margin: 0 auto;
+        height: 70%;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+  }
+}
+
+// 国际、军事、科技、时尚新闻列表样式
+.summary2{
+      position: absolute;
+      top: 0.9rem;
+      .list2{
+            width: 100%;
+            height: 1.5rem;
+            border-bottom: 0.01rem dashed #000;
+            padding-top: 0.1rem;
+      }
+      .img2{
+        width: 50%;
+        height: 80%;
+        float: left;
+        margin-top: 5%;
+        img{
+          width: 100%;
+          height: 100%;
+          border-radius: 0.1rem;
+        }
+      }
+      .title2{
+        width: 45%;
+        height: 65%;
+        float: right;
+        margin-top: 5%;
+        margin-left: 5%;
+      }
+      span{
+        width: 95%;
+        height: 20%;
+        margin-left: 5%;
+      }
+}
+
+// 加载菊花样式
+.loading{
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        img{
+            width: 0.8rem;
+            height: 0.8rem;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            margin-left: -0.4rem;
+            margin-top: -0.4rem;
+            animation: mymove 2s infinite linear;
+        }
+        @keyframes mymove{
+            from{
+                transform: rotate(0deg);
+            }to{
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+// 详情页样式
+article{
+  width: 90%;
+  margin: 0.1rem auto;
+  h1{
+    width: 100%;
+    font-size: 0.2rem;
+    color: #333; 
+    margin-bottom: 0.1rem; 
+  }
+  .src{
+    display: block;
+    padding-bottom: 0.1rem;
+    color: #999;
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 0.1rem;
+  }
+  .txt{
+    font-size: 0.16rem;
+    line-height: 0.2rem;
+  }
+}
+
